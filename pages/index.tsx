@@ -12,6 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <button
+        id='mybutton'
         onClick={()=>{
           console.log("hello")
           window.parent.postMessage('any message', "*");
