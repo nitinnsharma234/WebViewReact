@@ -38,8 +38,13 @@ export default function Home() {
           //   window.flutter_inappwebview.callHandler('myHandlerName', ...args);
           // });
           // window.add
+          //@ts-ignore
+          if (window.flutter_inappwebview) {
+            //@ts-ignore
+            window.flutter_inappwebview.callHandler('myHandlerName', 'Rahul 123')
+          }
         }}
-        >Hello</button>
+        >Rahul 123</button>
        </main>
     </div>
   )
