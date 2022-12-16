@@ -16,6 +16,11 @@ export default function Home() {
         onClick={()=>{
           console.log("hello")
           window.parent.postMessage('any message', "*");
+          if(window.flutter_inappwebview) {
+            window.flutter_inappwebview.callHandler('myHandlerName', 'click from my button');
+          } else {
+            console.log('not able to find button')
+          }
         }}
         >Hello</button>
        </main>
