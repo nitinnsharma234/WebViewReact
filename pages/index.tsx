@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const [sum, setSum] = useState(0);
   useEffect(()=>{
     if (window) {
       console.log('window created')
@@ -39,14 +40,16 @@ export default function Home() {
           // });
           // window.add
           //@ts-ignore
-          window.test="Jfhuidsh"
+          window.test= (a, b) => {
+            setSum(a+b)
+          }
           //@ts-ignore
           if (window.flutter_inappwebview) {
             //@ts-ignore
             window.flutter_inappwebview.callHandler('myHandlerName', 'Rahul 123')
           }
         }}
-        >Click Me!!</button>
+        >Click Me!! {sum}</button>
        </main>
     </div>
   )
