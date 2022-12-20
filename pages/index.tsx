@@ -46,7 +46,7 @@ export default function Home() {
             window.flutter_inappwebview.callHandler('myHandlerName', 'Rahul 123')
           }
         }}
-        >Rahul 123</button>
+        >Click Me!!</button>
        </main>
     </div>
   )
