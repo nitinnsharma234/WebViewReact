@@ -39,6 +39,8 @@ export default function Home() {
           // });
           // window.add
           //@ts-ignore
+          window.test="Jfhuidsh"
+          //@ts-ignore
           if (window.flutter_inappwebview) {
             //@ts-ignore
             window.flutter_inappwebview.callHandler('myHandlerName', 'Rahul 123')
